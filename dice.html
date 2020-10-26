@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+
+
+
+
+
+
+<center>
+
+
+<h1 style="color: red;" id="out"> Dice Game</h1>
+
+
+<table>
+
+<tr>
+    
+<td><td><img height="200px" style="border-radius: 50px; margin: 20px; box-shadow: 15px 15px #8D9048;" width="200px" id="pic1" src="1.jpg">
+
+</td>
+<td><img height="200px" style="border-radius: 50px; margin: 20px; box-shadow: 15px 15px #8D9048;" width="200px" id="pic2" src="1.jpg">
+</td>
+<td><td><img height="200px" style="border-radius: 50px; margin: 20px; box-shadow: 15px 15px #8D9048;" width="200px" id="pic3" src="1.jpg">
+
+</td>
+
+
+</tr>
+
+</table>
+
+<br />
+<br />
+
+<button style="padding: 5px; border:none; border-radius: 10px; color: red; background-color: rgb(65, 65, 65);" id="btn">
+<h3>Click Me!</h3>
+
+</button>
+</center>
+
+
+
+
+
+
+
+
+<script>
+
+
+const pic1 = document.getElementById("pic1");
+const pic2 = document.getElementById("pic2");
+const pic3 = document.getElementById("pic3");
+
+let obj = {
+
+0:"1.jpg",
+1:"2.jpg",
+2:"3.jpg",
+3:"4.jpg",
+4:"5.jpg",
+5:"6.jpg"
+
+
+};
+
+function dice() {
+
+   let rand = Math.floor(Math.random() * Math.floor(6));
+    return obj[rand]; 
+}
+
+
+
+document.getElementById("btn").addEventListener("click", () => {
+
+pic1.src= dice();
+pic2.src= dice();
+pic3.src= dice();
+
+
+});
+
+    </script>
+</body>
+</html>
